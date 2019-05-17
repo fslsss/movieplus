@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.movieplus.dao.VodDao">
+
+   <resultMap type="com.movieplus.entity.Vod" id="VodResultMap">
+       <id column="vod_id" property="vod_id" jdbcType="VARCHAR"/>
+       <result column="vod_name" property="vod_name" jdbcType="VARCHAR"/>
+       <result column="vod_ename" property="vod_ename" jdbcType="VARCHAR"/>
+       <result column="vod_title" property="vod_title" jdbcType="VARCHAR"/>
+       <result column="vod_keywords" property="vod_keywords" jdbcType="VARCHAR"/>
+       <result column="vod_type" property="vod_type" jdbcType="VARCHAR"/>
+       <result column="vod_color" property="vod_color" jdbcType="VARCHAR"/>
+       <result column="vod_actor" property="vod_actor" jdbcType="VARCHAR"/>
+       <result column="vod_director" property="vod_director" jdbcType="VARCHAR"/>
+       <result column="vod_content" property="vod_content" jdbcType="VARCHAR"/>
+       <result column="vod_pic" property="vod_pic" jdbcType="VARCHAR"/>
+       <result column="vod_pic_bg" property="vod_pic_bg" jdbcType="VARCHAR"/>
+       <result column="vod_pic_slide" property="vod_pic_slide" jdbcType="VARCHAR"/>
+       <result column="vod_area" property="vod_area" jdbcType="VARCHAR"/>
+       <result column="od_language" property="od_language" jdbcType="VARCHAR"/>
+       <result column="vod_year" property="vod_year" jdbcType="INTEGER"/>
+       <result column="vod_continu" property="vod_continu" jdbcType="VARCHAR"/>
+       <result column="vod_total" property="vod_total" jdbcType="VARCHAR"/>
+       <result column="vod_isend" property="vod_isend" jdbcType="VARCHAR"/>
+       <result column="vod_addtime" property="vod_addtime" jdbcType="INTEGER"/>
+       <result column="vod_filmtime" property="vod_filmtime" jdbcType="INTEGER"/>
+       <result column="vod_hits" property="vod_hits" jdbcType="VARCHAR"/>
+       <result column="vod_hits_day" property="vod_hits_day" jdbcType="VARCHAR"/>
+       <result column="vod_hits_week" property="vod_hits_week" jdbcType="VARCHAR"/>
+       <result column="vod_hits_month" property="vod_hits_month" jdbcType="INTEGER"/>
+       <result column="vod_hits_lasttime" property="vod_hits_lasttime" jdbcType="VARCHAR"/>
+       <result column="vod_stars" property="vod_stars" jdbcType="VARCHAR"/>
+       <result column="vod_up" property="vod_up" jdbcType="VARCHAR"/>
+       <result column="vod_down" property="vod_down" jdbcType="VARCHAR"/>
+       <result column="vod_ispay" property="vod_ispay" jdbcType="VARCHAR"/>
+       <result column="vod_price" property="vod_price" jdbcType="VARCHAR"/>
+       <result column="vod_trysee" property="vod_trysee" jdbcType="VARCHAR"/>
+       <result column="vod_play" property="vod_play" jdbcType="VARCHAR"/>
+       <result column="vod_server" property="vod_server" jdbcType="VARCHAR"/>
+       <result column="vod_url" property="vod_url" jdbcType="VARCHAR"/>
+       <result column="vod_inputer" property="vod_inputer" jdbcType="VARCHAR"/>
+       <result column="vod_reurl" property="vod_reurl" jdbcType="VARCHAR"/>
+       <result column="vod_jumpurl" property="vod_jumpurl" jdbcType="VARCHAR"/>
+       <result column="vod_letter" property="vod_letter" jdbcType="VARCHAR"/>
+       <result column="vod_skin" property="vod_skin" jdbcType="VARCHAR"/>
+       <result column="vod_gold" property="vod_gold" jdbcType="VARCHAR"/>
+       <result column="vod_golder" property="vod_golder" jdbcType="VARCHAR"/>
+       <result column="vod_length" property="vod_length" jdbcType="VARCHAR"/>
+       <result column="vod_weekday" property="vod_weekday" jdbcType="VARCHAR"/>
+       <result column="vod_series" property="vod_series" jdbcType="VARCHAR"/>
+       <result column="vod_copyright" property="vod_copyright" jdbcType="VARCHAR"/>
+       <result column="vod_state" property="vod_state" jdbcType="VARCHAR"/>
+        <result column="vod_version" property="vod_version" jdbcType="VARCHAR"/>
+        <result column="vod_tv" property="vod_tv" jdbcType="VARCHAR"/>
+        <result column="vod_douban_id" property="vod_douban_id" jdbcType="VARCHAR"/>
+        <result column="vod_douban_score" property="vod_douban_score" jdbcType="VARCHAR"/>
+        <result column="vod_scenario" property="vod_scenario" jdbcType="VARCHAR"/>
+        <result column="vod_lines" property="vod_lines" jdbcType="VARCHAR"/>
+        <result column="vod_watch" property="vod_watch" jdbcType="VARCHAR"/>
+        <result column="vod_ending" property="vod_ending" jdbcType="VARCHAR"/>
+        <result column="vod_writer" property="vod_writer" jdbcType="VARCHAR"/>
+        <result column="vod_producer" property="vod_producer" jdbcType="VARCHAR"/>
+        <result column="vod_camera" property="vod_camera" jdbcType="VARCHAR"/>
+        <result column="vod_editor" property="vod_editor" jdbcType="VARCHAR"/>
+        <result column="vod_music" property="vod_music" jdbcType="VARCHAR"/>
+        <result column="vod_art" property="vod_art" jdbcType="VARCHAR"/>
+        <result column="vod_extend" property="vod_extend" jdbcType="VARCHAR"/>
+   </resultMap>
+   <select id="findVodList" resultMap="VodResultMap" parameterType="int">
+       select * from ff_vod limit 1,10
+   </select>
+</mapper>
